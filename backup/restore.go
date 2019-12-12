@@ -36,8 +36,8 @@ import (
 	"github.com/cenkalti/backoff"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/someone1/zfsbackup-go/backends"
-	"github.com/someone1/zfsbackup-go/helpers"
+	"github.com/kietdlam/zfsbackup-go/backends"
+	"github.com/kietdlam/zfsbackup-go/helpers"
 )
 
 type downloadSequence struct {
