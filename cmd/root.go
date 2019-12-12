@@ -36,7 +36,7 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/crypto/ssh/terminal"
 
-	"github.com/someone1/zfsbackup-go/helpers"
+	"github.com/kietdlam/zfsbackup-go/helpers"
 )
 
 var (
@@ -183,7 +183,7 @@ func processFlags(cmd *cobra.Command, args []string) error {
 	}
 
 	if jobInfo.SignFrom != "" {
-		if jobInfo.SignKey = helpers.GetPrivateKeyByEmail(jobInfo.SignFrom); jobInfo.SignKey == nil {
+		if jobInfo.SignKey = helpers.GetPublicKeyByEmail(jobInfo.SignFrom); jobInfo.SignKey == nil {
 			helpers.AppLogger.Errorf("Could not find private key for %s", jobInfo.SignFrom)
 			return errInvalidInput
 		}

@@ -42,7 +42,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager/s3manageriface"
 
-	"github.com/someone1/zfsbackup-go/helpers"
+	"github.com/kietdlam/zfsbackup-go/helpers"
 )
 
 // AWSS3BackendPrefix is the URI prefix used for the AWSS3Backend.

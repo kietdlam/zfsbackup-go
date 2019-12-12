@@ -58,7 +58,7 @@ func promptFunc(keys []openpgp.Key, symmetric bool) ([]byte, error) {
 func getKeyByEmail(keyring openpgp.EntityList, email string) *openpgp.Entity {
 	for _, entity := range keyring {
 		for _, ident := range entity.Identities {
-			if ident.UserId.Email == email {
+			if ident.UserId.Id == email {
 				return entity
 			}
 		}
