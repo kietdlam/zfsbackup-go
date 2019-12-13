@@ -30,8 +30,8 @@ import (
 	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"
 
-	//"github.com/kietdlam/zfsbackup-go/helpers"
-	"../helpers"
+	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"../helpers"
 )
 
 // GoogleCloudStorageBackendPrefix is the URI prefix used for the GoogleCloudStorageBackend.

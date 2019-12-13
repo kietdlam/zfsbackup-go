@@ -26,8 +26,8 @@ import (
 	"testing"
 	"time"
 
-	//"github.com/kietdlam/zfsbackup-go/helpers"
-	"../helpers"
+	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"../helpers"
 )
 
 func TestDeleteGetBackendForURI(t *testing.T) {

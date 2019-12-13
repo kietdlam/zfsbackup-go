@@ -27,8 +27,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	//"github.com/kietdlam/zfsbackup-go/helpers"
-	"../helpers"
+	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"../helpers"
 )
 
 // versionCmd represents the version command

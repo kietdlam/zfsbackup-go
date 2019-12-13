@@ -30,8 +30,8 @@ import (
 	"strings"
 	"testing"
 
-	//"github.com/kietdlam/zfsbackup-go/helpers"
-	"../helpers"
+	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"../helpers"
 )
 
 var (

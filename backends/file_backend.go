@@ -27,8 +27,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	//"github.com/kietdlam/zfsbackup-go/helpers"
-	"../helpers"
+	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"../helpers"
 )
 
 // FileBackendPrefix is the URI prefix used for the FileBackend.
