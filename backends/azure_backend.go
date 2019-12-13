@@ -218,11 +218,11 @@ func (a *AzureBackend) Upload(ctx context.Context, vol *helpers.VolumeInfo) erro
 	}
 
 	// Set to Cool for manifests
-	//if strings.HasPrefix(name, "manifests") {
-	//	_, err = blobURL.SetTier(ctx, azblob.AccessTierCool, azblob.LeaseAccessConditions{})
-	//} else {
-	//	_, err = blobURL.SetTier(ctx, azblob.AccessTierArchive, azblob.LeaseAccessConditions{})
-	//}
+	if strings.HasPrefix(name, "manifests") {
+		_, err = blobURL.SetTier(ctx, azblob.AccessTierCool, azblob.LeaseAccessConditions{})
+	} else {
+		_, err = blobURL.SetTier(ctx, azblob.AccessTierArchive, azblob.LeaseAccessConditions{})
+	}
 
 	if err != nil {
 		helpers.AppLogger.Debugf("azure backend: Error while setting block to archive tier %s", blobURL)
