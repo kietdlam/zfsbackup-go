@@ -29,8 +29,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/kietdlam/zfsbackup-go/backends"
-	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"github.com/kietdlam/zfsbackup-go/backends"
+	//"github.com/kietdlam/zfsbackup-go/helpers"
+	"../backends"
+	"../helpers"
 )
 
 func prepareBackend(ctx context.Context, j *helpers.JobInfo, backendURI string, uploadBuffer chan bool) (backends.Backend, error) {

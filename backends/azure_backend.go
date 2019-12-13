@@ -38,7 +38,8 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"github.com/kietdlam/zfsbackup-go/helpers"
+	"../helpers"
 )
 
 // Keep an eye on the Azure Go SDK, apparently there's a rewrite in progress: https://github.com/Azure/azure-sdk-for-go/issues/626#issuecomment-324398278
@@ -215,6 +216,18 @@ func (a *AzureBackend) Upload(ctx context.Context, vol *helpers.VolumeInfo) erro
 	if err != nil {
 		helpers.AppLogger.Debugf("azure backend: Error while finalizing volume %s - %v", vol.ObjectName, err)
 	}
+
+	// Set to Cool for manifests
+	if strings.HasPrefix(name, "manifests") {
+		_, err = blobURL.SetTier(ctx, azblob.AccessTierCool, azblob.LeaseAccessConditions{})
+	} else {
+		_, err = blobURL.SetTier(ctx, azblob.AccessTierArchive, azblob.LeaseAccessConditions{})
+	}
+
+	if err != nil {
+		helpers.AppLogger.Debugf("azure backend: Error while setting block to archive tier %s", blobURL)
+	}
+
 	return err
 }
 

@@ -26,8 +26,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/kietdlam/zfsbackup-go/backup"
-	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"github.com/kietdlam/zfsbackup-go/backup"
+	//"github.com/kietdlam/zfsbackup-go/helpers"
+	"../backup"
+	"../helpers"
 )
 
 var (

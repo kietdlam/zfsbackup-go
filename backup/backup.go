@@ -41,8 +41,10 @@ import (
 	"github.com/nightlyone/lockfile"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/kietdlam/zfsbackup-go/backends"
-	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"github.com/kietdlam/zfsbackup-go/backends"
+	//"github.com/kietdlam/zfsbackup-go/helpers"
+	"../backends"
+	"../helpers"
 )
 
 var (

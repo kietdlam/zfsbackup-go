@@ -30,7 +30,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"github.com/kietdlam/zfsbackup-go/helpers"
+	"../helpers"
 )
 
 type gcsMockClient struct {

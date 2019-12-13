@@ -21,7 +21,8 @@
 package main
 
 import (
-	"github.com/kietdlam/zfsbackup-go/cmd"
+	//"github.com/kietdlam/zfsbackup-go/cmd"
+	"./cmd"
 )
 
 func main() {

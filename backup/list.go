@@ -30,7 +30,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kietdlam/zfsbackup-go/helpers"
+	//"github.com/kietdlam/zfsbackup-go/helpers"
+	"../helpers"
 )
 
 // List will sync the manifests found in the target destination to the local cache
